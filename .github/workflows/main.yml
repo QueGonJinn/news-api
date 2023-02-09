@@ -2,11 +2,11 @@ name: Publish Docker
 
 on: 
   push:
-   baranches: [main]
+    baranches: [main]
 
 jobs: 
   build: 
-    runs-on: ubuntu-latest;
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
       - name: Publish to Registry
