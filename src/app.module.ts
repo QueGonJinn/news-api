@@ -5,6 +5,7 @@ import { NewsModule } from './news/news.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { getMongoConfig } from './configs/mongo.config';
 import { TypegooseModule } from 'nestjs-typegoose';
+import { FilesModule } from './files/files.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { TypegooseModule } from 'nestjs-typegoose';
     AuthModule,
     PageModule,
     NewsModule,
+    FilesModule,
   ],
 })
 export class AppModule {}
