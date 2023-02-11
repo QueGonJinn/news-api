@@ -6,9 +6,12 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { getMongoConfig } from './configs/mongo.config';
 import { TypegooseModule } from 'nestjs-typegoose';
 import { FilesModule } from './files/files.module';
+import { SitemapModule } from './sitemap/sitemap.module';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   imports: [
+    ScheduleModule.forRoot(),
     ConfigModule.forRoot(),
     TypegooseModule.forRootAsync({
       imports: [ConfigModule],
@@ -19,6 +22,7 @@ import { FilesModule } from './files/files.module';
     PageModule,
     NewsModule,
     FilesModule,
+    SitemapModule,
   ],
 })
 export class AppModule {}

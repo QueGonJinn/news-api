@@ -22,6 +22,10 @@ export class PageService {
     return this.pageModel.findOne({ alias }).exec();
   }
 
+  async findAll() {
+    return this.pageModel.find({}).exec();
+  }
+
   async findByCategory(firstCategory: NewsCategory) {
     return this.pageModel
       .aggregate([
